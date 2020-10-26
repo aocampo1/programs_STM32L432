@@ -1,0 +1,239 @@
+Component: ARM Compiler 6.14 Tool: armlink [5db06800]
+
+==============================================================================
+
+Section Cross References
+
+    startup_stm32l432xx.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32l432xx.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32l432xx.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32l432xx.o(RESET) refers to startup_stm32l432xx.o(STACK) for __initial_sp
+    startup_stm32l432xx.o(RESET) refers to startup_stm32l432xx.o(.text) for Reset_Handler
+    startup_stm32l432xx.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32l432xx.o(.text) refers to system_stm32l4xx.o(.text.SystemInit) for SystemInit
+    startup_stm32l432xx.o(.text) refers to blink_led.o(MyCodigo) for __main
+    startup_stm32l432xx.o(.text) refers to startup_stm32l432xx.o(HEAP) for Heap_Mem
+    startup_stm32l432xx.o(.text) refers to startup_stm32l432xx.o(STACK) for Stack_Mem
+    system_stm32l4xx.o(.ARM.exidx.text.SystemInit) refers to system_stm32l4xx.o(.text.SystemInit) for [Anonymous Symbol]
+    system_stm32l4xx.o(.text.SystemCoreClockUpdate) refers to system_stm32l4xx.o(.rodata.MSIRangeTable) for MSIRangeTable
+    system_stm32l4xx.o(.text.SystemCoreClockUpdate) refers to system_stm32l4xx.o(.data.SystemCoreClock) for SystemCoreClock
+    system_stm32l4xx.o(.text.SystemCoreClockUpdate) refers to system_stm32l4xx.o(.rodata.AHBPrescTable) for AHBPrescTable
+    system_stm32l4xx.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_stm32l4xx.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing system_stm32l4xx.o(.text), (0 bytes).
+    Removing system_stm32l4xx.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing system_stm32l4xx.o(.text.SystemCoreClockUpdate), (190 bytes).
+    Removing system_stm32l4xx.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
+    Removing system_stm32l4xx.o(.data.SystemCoreClock), (4 bytes).
+    Removing system_stm32l4xx.o(.rodata.AHBPrescTable), (16 bytes).
+    Removing system_stm32l4xx.o(.rodata.APBPrescTable), (8 bytes).
+    Removing system_stm32l4xx.o(.rodata.MSIRangeTable), (48 bytes).
+
+8 unused section(s) (total 282 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    RTE/Device/STM32L432KCUx/startup_stm32l432xx.s 0x00000000   Number         0  startup_stm32l432xx.o ABSOLUTE
+    blink_led.s                              0x00000000   Number         0  blink_led.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    system_stm32l4xx.c                       0x00000000   Number         0  system_stm32l4xx.o ABSOLUTE
+    RESET                                    0x08000000   Section      396  startup_stm32l432xx.o(RESET)
+    $v0                                      0x0800018c   Number         0  startup_stm32l432xx.o(.text)
+    .text                                    0x0800018c   Section       64  startup_stm32l432xx.o(.text)
+    .text                                    0x080001cc   Section        0  heapauxi.o(.text)
+    [Anonymous Symbol]                       0x080001d4   Section        0  system_stm32l4xx.o(.text.SystemInit)
+    $v0                                      0x08000228   Number         0  blink_led.o(MyCodigo)
+    MyCodigo                                 0x08000228   Section      124  blink_led.o(MyCodigo)
+    Heap_Mem                                 0x20000000   Data         512  startup_stm32l432xx.o(HEAP)
+    HEAP                                     0x20000000   Section      512  startup_stm32l432xx.o(HEAP)
+    Stack_Mem                                0x20000200   Data        1024  startup_stm32l432xx.o(STACK)
+    STACK                                    0x20000200   Section     1024  startup_stm32l432xx.o(STACK)
+    __initial_sp                             0x20000600   Data           0  startup_stm32l432xx.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors_Size                           0x0000018c   Number         0  startup_stm32l432xx.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32l432xx.o(RESET)
+    Reset_Handler                            0x0800018d   Thumb Code     8  startup_stm32l432xx.o(.text)
+    __Vectors_End                            0x0800018c   Data           0  startup_stm32l432xx.o(RESET)
+    NMI_Handler                              0x08000195   Thumb Code     2  startup_stm32l432xx.o(.text)
+    HardFault_Handler                        0x08000197   Thumb Code     2  startup_stm32l432xx.o(.text)
+    MemManage_Handler                        0x08000199   Thumb Code     2  startup_stm32l432xx.o(.text)
+    BusFault_Handler                         0x0800019b   Thumb Code     2  startup_stm32l432xx.o(.text)
+    UsageFault_Handler                       0x0800019d   Thumb Code     2  startup_stm32l432xx.o(.text)
+    SVC_Handler                              0x0800019f   Thumb Code     2  startup_stm32l432xx.o(.text)
+    DebugMon_Handler                         0x080001a1   Thumb Code     2  startup_stm32l432xx.o(.text)
+    PendSV_Handler                           0x080001a3   Thumb Code     2  startup_stm32l432xx.o(.text)
+    SysTick_Handler                          0x080001a5   Thumb Code     2  startup_stm32l432xx.o(.text)
+    ADC1_IRQHandler                          0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    CAN1_RX0_IRQHandler                      0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    CAN1_RX1_IRQHandler                      0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    CAN1_SCE_IRQHandler                      0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    CAN1_TX_IRQHandler                       0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    COMP_IRQHandler                          0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    CRS_IRQHandler                           0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    DMA1_Channel1_IRQHandler                 0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    DMA1_Channel2_IRQHandler                 0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    DMA1_Channel3_IRQHandler                 0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    DMA1_Channel4_IRQHandler                 0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    DMA1_Channel5_IRQHandler                 0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    DMA1_Channel6_IRQHandler                 0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    DMA1_Channel7_IRQHandler                 0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    DMA2_Channel1_IRQHandler                 0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    DMA2_Channel2_IRQHandler                 0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    DMA2_Channel3_IRQHandler                 0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    DMA2_Channel4_IRQHandler                 0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    DMA2_Channel5_IRQHandler                 0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    DMA2_Channel6_IRQHandler                 0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    DMA2_Channel7_IRQHandler                 0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    EXTI0_IRQHandler                         0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    EXTI15_10_IRQHandler                     0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    EXTI1_IRQHandler                         0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    EXTI2_IRQHandler                         0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    EXTI3_IRQHandler                         0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    EXTI4_IRQHandler                         0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    EXTI9_5_IRQHandler                       0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    FLASH_IRQHandler                         0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    FPU_IRQHandler                           0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    I2C1_ER_IRQHandler                       0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    I2C1_EV_IRQHandler                       0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    I2C3_ER_IRQHandler                       0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    I2C3_EV_IRQHandler                       0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    LPTIM1_IRQHandler                        0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    LPTIM2_IRQHandler                        0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    LPUART1_IRQHandler                       0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    PVD_PVM_IRQHandler                       0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    QUADSPI_IRQHandler                       0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    RCC_IRQHandler                           0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    RNG_IRQHandler                           0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    RTC_Alarm_IRQHandler                     0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    RTC_WKUP_IRQHandler                      0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    SAI1_IRQHandler                          0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    SPI1_IRQHandler                          0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    SPI3_IRQHandler                          0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    SWPMI1_IRQHandler                        0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    TAMP_STAMP_IRQHandler                    0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    TIM1_BRK_TIM15_IRQHandler                0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    TIM1_CC_IRQHandler                       0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    TIM1_TRG_COM_IRQHandler                  0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    TIM1_UP_TIM16_IRQHandler                 0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    TIM2_IRQHandler                          0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    TIM6_DAC_IRQHandler                      0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    TIM7_IRQHandler                          0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    TSC_IRQHandler                           0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    USART1_IRQHandler                        0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    USART2_IRQHandler                        0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    USB_IRQHandler                           0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    WWDG_IRQHandler                          0x080001a7   Thumb Code     0  startup_stm32l432xx.o(.text)
+    __user_initial_stackheap                 0x080001a9   Thumb Code     0  startup_stm32l432xx.o(.text)
+    __use_two_region_memory                  0x080001cd   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x080001cf   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x080001d1   Thumb Code     2  heapauxi.o(.text)
+    SystemInit                               0x080001d5   Thumb Code    82  system_stm32l4xx.o(.text.SystemInit)
+    __main                                   0x08000229   Thumb Code     0  blink_led.o(MyCodigo)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x0800018d
+
+  Load Region LR_1 (Base: 0x08000000, Size: 0x000002a4, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000002a4, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x0000018c   Data   RO            8    RESET               startup_stm32l432xx.o
+    0x0800018c   0x0800018c   0x00000040   Code   RO            9  * .text               startup_stm32l432xx.o
+    0x080001cc   0x080001cc   0x00000006   Code   RO           31    .text               c_w.l(heapauxi.o)
+    0x080001d2   0x080001d2   0x00000002   PAD
+    0x080001d4   0x080001d4   0x00000052   Code   RO           14    .text.SystemInit    system_stm32l4xx.o
+    0x08000226   0x08000226   0x00000002   PAD
+    0x08000228   0x08000228   0x0000007c   Code   RO            1  * MyCodigo            blink_led.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x080002a4, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+
+    **** No section assigned to this execution region ****
+
+
+    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x080002a4, Size: 0x00000600, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000        -       0x00000200   Zero   RW            7    HEAP                startup_stm32l432xx.o
+    0x20000200        -       0x00000400   Zero   RW            6    STACK               startup_stm32l432xx.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       124         30          0          0          0        288   blink_led.o
+        64         26        396          0       1536        868   startup_stm32l432xx.o
+        82          0          0          0          0       3304   system_stm32l4xx.o
+
+    ----------------------------------------------------------------------
+       272         56        396          0       1536       4460   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         6          0          0          0          0        152   heapauxi.o
+
+    ----------------------------------------------------------------------
+         8          0          0          0          0        152   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+         6          0          0          0          0        152   c_w.l
+
+    ----------------------------------------------------------------------
+         8          0          0          0          0        152   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+       280         56        396          0       1536       4612   Grand Totals
+       280         56        396          0       1536       4612   ELF Image Totals
+       280         56        396          0          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                  676 (   0.66kB)
+    Total RW  Size (RW Data + ZI Data)              1536 (   1.50kB)
+    Total ROM Size (Code + RO Data + RW Data)        676 (   0.66kB)
+
+==============================================================================
+
